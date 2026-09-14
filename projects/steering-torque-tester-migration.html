@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steering Torque Tester Control Migration — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">Control System Migration for a Truck Steering Torque Tester</h1>
+    <div class="detail-tags">
+      <span class="chip">Motion Control</span>
+      <span class="chip">Allen-Bradley</span>
+      <span class="chip">Controls Migration</span>
+      <span class="chip">Automotive</span>
+    </div>
+    <p class="detail-summary">Migrated a legacy PLC5-based test rig — used to apply and measure steering torque on truck steering assemblies — to a modern ControlLogix and Kinetix 6500 platform, with a complete reprogramming of the control logic and a 4-day commissioning window.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>The Application</h3>
+        <ul>
+          <li>The machine applies torque to a truck steering assembly through a servo motor and speed reducer connected to the steering input under test.</li>
+          <li>A hydraulic system of pumps and proportional valves circulates oil through the steering assembly under controlled conditions.</li>
+          <li>A load cell measures the applied torque in real time; the PLC evaluates the readings against configured min/max thresholds together with hydraulic flow values to approve or reject each part.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>Removed obsolete control, mechanical and electrical equipment; installed and wired the new platform.</li>
+          <li>Migrated the control platform from Allen-Bradley PLC5 to ControlLogix, and drives from Allen-Bradley 1394 to Kinetix 6500.</li>
+          <li>Complete reprogramming of the PLC control logic — not a like-for-like port.</li>
+          <li>Commissioning and post-commissioning on-site support.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technical Highlights</h3>
+        <ul>
+          <li>3-servo torque control, using Motion Control instruction libraries on the new platform.</li>
+          <li>Closed-loop hydraulic control of pumps and proportional valves synchronized with the torque test sequence.</li>
+          <li>Telesis part-marking control integrated into the test cycle.</li>
+          <li>Barcode reader and encoder configuration and programming for part identification and position feedback.</li>
+        </ul>
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Industry</h4>
+        <div class="val">Automotive — steering systems</div>
+        <h4 style="margin-top:16px;">Platform</h4>
+        <div class="val">Allen-Bradley ControlLogix + Kinetix 6500</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Lead engineer, controls migration</div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">4 days</div><div class="lbl">Commissioning window</div></div>
+        <div class="metric"><div class="num">2 days</div><div class="lbl">On-site post-implementation support</div></div>
+        <div class="metric"><div class="num">Dec 2018</div><div class="lbl">Implementation date</div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

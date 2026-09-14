@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Headlamp Assembly Traceability System — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">Part-Level Traceability System for Automotive Headlamp Assembly</h1>
+    <div class="detail-tags">
+      <span class="chip">Traceability</span>
+      <span class="chip">Siemens S7-1200</span>
+      <span class="chip">Industry 4.0</span>
+      <span class="chip">Automotive</span>
+    </div>
+    <p class="detail-summary">Designed and implemented a full traceability system for two 20-station headlamp assembly lines building 2019-model-year automotive headlamps — tying together PLC cycle data, barcode scanning, and a custom Visual Basic + SQL Server application so every part could be tracked from bulb assembly through final photometric release.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>The Line</h3>
+        <ul>
+          <li>Headlamp assembly and test line for a 2019-model-year vehicle, 20 stations, controlled by Siemens S7-1200 PLCs.</li>
+          <li>Stations covered label printing, screwdriving, LED module and reflector assembly, LVDT position checks, laser engraving, leak testing, photometric adjustment (Dajac), and final barcode-based part release.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>Implemented traceability across 2 assembly lines end-to-end.</li>
+          <li>Installed and configured the Ethernet network — cable trays, conduit, network cabinet, cable routing and IP addressing for all stations.</li>
+          <li>Reprogrammed the station PLCs to capture cycle data and modified the HMIs to add traceability messages and controls.</li>
+          <li>Developed a Visual Basic data-acquisition application and a local SQL Server database to store and report on every part.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>System Architecture</h3>
+        <ul>
+          <li><strong>Scanner</strong> reads the serial number printed on each part's label.</li>
+          <li><strong>HMI</strong> — station control plus new traceability messages and prompts.</li>
+          <li><strong>PLC</strong> collects scanner and station cycle data and holds it for transfer to the database.</li>
+          <li><strong>Industrial PC</strong> runs the custom VB application, communicating with each station's PLC and storing results in a local SQL Server database.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Data-Acquisition Application</h3>
+        <ul>
+          <li>Real-time communication with the S7-1200 PLCs for cycle data.</li>
+          <li>Operator interface showing produced-part status, plus a serial-number lookup to inspect any scanned part's history.</li>
+          <li>Line-flow control enforced by business rules — a part can't advance if it fails a station's criteria.</li>
+          <li>SQL Server storage with spreadsheet report export.</li>
+        </ul>
+      </div>
+
+      <div class="gallery">
+        <img src="../assets/projects/headlamp-traceability-jetta/jetta-004-013.png" alt="Control room monitors running the traceability system">
+        <img src="../assets/projects/headlamp-traceability-jetta/jetta-008-026.png" alt="Overhead network cabling installed above the line">
+        <img src="../assets/projects/headlamp-traceability-jetta/jetta-007-023.png" alt="Custom data-acquisition application screen">
+        <img src="../assets/projects/headlamp-traceability-jetta/jetta-diagram-architecture-06.png" alt="System architecture diagram">
+        <img src="../assets/projects/headlamp-traceability-jetta/jetta-diagram-flow-09.png" alt="Traceability process flow diagram">
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Industry</h4>
+        <div class="val">Automotive lighting manufacturing</div>
+        <h4 style="margin-top:16px;">Platform</h4>
+        <div class="val">Siemens S7-1200 / KTP600 / Cognex Dataman</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Lead engineer, system design &amp; implementation</div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">2</div><div class="lbl">Assembly lines covered</div></div>
+        <div class="metric"><div class="num">20</div><div class="lbl">Stations per line</div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>
