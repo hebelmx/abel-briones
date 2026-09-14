@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power-Steering Gear Assembly Machine Migration — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">Control Migration &amp; Throughput Increase — Power-Steering Gear Assembly Machine</h1>
+    <div class="detail-tags">
+      <span class="chip">Motion Control</span>
+      <span class="chip">Allen-Bradley</span>
+      <span class="chip">Mechanical Redesign</span>
+      <span class="chip">Automotive</span>
+    </div>
+    <p class="detail-summary">A pinion-and-yoke assembly and torque-calibration machine for hydraulic steering gears was capped at 15–25 pieces/hour on an obsolete PLC 5/30 platform with DC drives. Migrating the control and motion system to ControlLogix/Kinetix — and redesigning the torque-nut and lock-nut mechanical subsystems — pushed output to 35–40 pieces/hour.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>Migrated the PLC 5/30 to a ControlLogix 1756-L71.</li>
+          <li>Replaced PC-based monitoring with a PanelView Plus 1500 HMI.</li>
+          <li>Migrated 1394/DC drives to Kinetix 6500 with MPL servomotors.</li>
+          <li>Designed custom flanges, mechanical couplings and gearboxes to mount the new servomotors.</li>
+          <li>Redesigned the torque-nut and lock-nut mechanical subsystems.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Architecture</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">The ControlLogix processor communicates over EtherNet/IP to a PanelView Plus 1500 HMI and to Kinetix 6500 drives powering custom-coupled MPL servomotors, with load-cell torque measurement closing the loop on the assembly process.</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technology</h3>
+        <ul>
+          <li>Allen-Bradley ControlLogix 1756-L71, Kinetix 6500, PanelView Plus 1500</li>
+          <li>MPL servomotors over EtherNet/IP</li>
+          <li>Load-cell torque measurement</li>
+        </ul>
+      </div>
+
+      <div class="gallery">
+        <img src="../assets/projects/steering-gear-assembly-migration/steering-gear-assembly-migration-1.jpg" alt="Electrical cabinet on the plant floor next to the assembly machine">
+        <img src="../assets/projects/steering-gear-assembly-migration/steering-gear-assembly-migration-2.jpg" alt="Torque and valve assembly station with servomotors and monitoring screen">
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Industry</h4>
+        <div class="val">Automotive — hydraulic power-steering gears</div>
+        <h4 style="margin-top:16px;">Platform</h4>
+        <div class="val">Allen-Bradley ControlLogix / Kinetix 6500</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Lead engineer, controls &amp; mechanical redesign</div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">15–25 → 35–40</div><div class="lbl">Pieces/hour before → after</div></div>
+        <div class="metric"><div class="num">~130%</div><div class="lbl">Peak throughput gain</div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

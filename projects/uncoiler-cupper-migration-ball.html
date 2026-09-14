@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cupper &amp; Uncoiler Control Migration — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">Control System Migration — Aluminum Can-Stock Cupper &amp; Uncoiler</h1>
+    <div class="detail-tags">
+      <span class="chip">Automation</span>
+      <span class="chip">Allen-Bradley</span>
+      <span class="chip">Ball Corporation</span>
+      <span class="chip">2023</span>
+    </div>
+    <p class="detail-summary">Ball Corporation's Cupper 1 and Uncoiler machines — the 24oz cup-blanking area of an aluminum beverage-can line — ran on an obsolete Modicon PLC and Parker HMI with no viable long-term support path. I migrated both to Allen-Bradley ControlLogix L81 and PanelView Plus 1000, integrated over EtherNet/IP with the line's master PLC.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>Process, network and electrical audit, plus a full review of the legacy program logic.</li>
+          <li>Logic migration to Studio 5000 v33.</li>
+          <li>New PanelView 1000 HMI application — screens, alarms, recipes.</li>
+          <li>Panel installation and Ethernet cabling.</li>
+          <li>Manual and automatic sequence testing with live product, followed by FAT.</li>
+          <li>Documentation and operator training.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Architecture</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">The Cupper 1 and Uncoiler PLCs communicate with the line's master "Line Control" PLC over EtherNet/IP. The HMI exposes motor status, main/manual drive speed, coil count and fault diagnostics (e.g. "Falla de comunicación con Line Control").</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technology</h3>
+        <ul>
+          <li>Allen-Bradley ControlLogix L81, PanelView Plus 1000</li>
+          <li>Studio 5000 v33</li>
+          <li>EtherNet/IP</li>
+        </ul>
+      </div>
+
+      <div class="gallery">
+        <img src="../assets/projects/uncoiler-cupper-migration-ball/uncoiler-cupper-migration-ball-1.jpg" alt="Aluminum coil uncoiler and cupper tooling on the production line">
+        <img src="../assets/projects/uncoiler-cupper-migration-ball/uncoiler-cupper-migration-ball-2.jpg" alt="Studio 5000 Logix Designer project for the migrated Uncoiler controller">
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Client</h4>
+        <div class="val">Ball Corporation, Querétaro</div>
+        <h4 style="margin-top:16px;">Contact</h4>
+        <div class="val">Ing. Sergio Luján</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Lead engineer, controls migration</div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">May–Jul 2023</div><div class="lbl">Delivery window</div></div>
+      </div>
+      <div class="side-box">
+        <p style="margin:0; font-size:0.88rem; color:var(--text-dim);">Eliminated dependency on an obsolete, hard-to-source Modicon/Parker platform.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

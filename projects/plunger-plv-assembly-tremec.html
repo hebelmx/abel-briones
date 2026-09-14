@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plunger &amp; Park-Lock-Valve Assembly Station — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">Automated Plunger &amp; Park-Lock-Valve Assembly Station</h1>
+    <div class="detail-tags">
+      <span class="chip">Machine Design</span>
+      <span class="chip">Traceability</span>
+      <span class="chip">Tremec</span>
+      <span class="chip">2024</span>
+    </div>
+    <p class="detail-summary">Tremec needed to automate a manual assembly step joining a plunger and Park Lock Valve (PLV) with a dowel pin and retaining ring. I designed, built and programmed the replacement station, with full Datamatrix part traceability feeding directly into Tremec's existing traceability system.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>Bosch-profile structural frame and pneumatic pin/ring insertion tooling.</li>
+          <li>PLC/HMI programming for the full assembly sequence.</li>
+          <li>Cognex Datamatrix scanning integrated with Tremec's existing traceability system.</li>
+          <li>Electrical panel build and wiring.</li>
+          <li>FAT/SAT and commissioning.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Architecture</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">A pneumatically actuated press station inserts a dowel pin and retaining ring joining the plunger and PLV, with fixation verified cycle-to-cycle by a digital probe measurement. Datamatrix codes are read and pushed into Tremec's traceability system through PLC logic.</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technology</h3>
+        <ul>
+          <li>Siemens S7-1200, TP700 HMI</li>
+          <li>Cognex barcode/Datamatrix scanner</li>
+          <li>Pneumatic actuators, dowel-pin/retaining-ring press tooling</li>
+        </ul>
+      </div>
+
+      <div class="gallery">
+        <img src="../assets/projects/plunger-plv-assembly-tremec/plunger-plv-assembly-tremec-1.jpg" alt="CAD design of the dowel pin and retaining ring press tooling">
+        <img src="../assets/projects/plunger-plv-assembly-tremec/plunger-plv-assembly-tremec-2.jpg" alt="CAD design of the full assembly station">
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Client</h4>
+        <div class="val">Tremec, Querétaro</div>
+        <h4 style="margin-top:16px;">Contact</h4>
+        <div class="val">Ing. Sergio Luján García</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Lead engineer, machine design &amp; controls</div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">Jul–Oct 2024</div><div class="lbl">Delivery window</div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

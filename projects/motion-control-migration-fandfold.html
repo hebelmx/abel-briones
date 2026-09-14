@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FandFold Motion Control Migration — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">8-Axis Motion Control Migration — Surgical-Drape Folding Machine</h1>
+    <div class="detail-tags">
+      <span class="chip">Motion Control</span>
+      <span class="chip">Allen-Bradley</span>
+      <span class="chip">Controls Migration</span>
+      <span class="chip">Medical / Semi-Pharma</span>
+    </div>
+    <p class="detail-summary">A surgical operating-room drape folding machine was running on a discontinued Allen-Bradley SLC 500 platform with obsolete 1394 motion drives — a serious unplanned-downtime risk once spare parts ran out. I migrated the full 8-axis motion system to ControlLogix and Kinetix 6500 in a 14-day window, without giving up a single sheet per minute of production rate.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>Migrated the SLC 500 PLC to a ControlLogix 1756-L71.</li>
+          <li>Migrated the 10" PanelView 1000 HMI.</li>
+          <li>Migrated 13 servo drives (1394 family) to Kinetix 6500.</li>
+          <li>Migrated 13 servomotors (1326 family) plus 3 AC induction motor drives.</li>
+          <li>Designed, fabricated and installed a new control panel, shipped from our shop to the plant.</li>
+          <li>Commissioned within 14 days with zero reduction in production capability.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Motion Architecture</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">Eight coordinated axes — Unwinder, Folders/AuxPull, Main Pull (master axis), Cross-Cutter (running a non-linear electronic-cam profile), Separator, Diverter, Crossfolder 1 &amp; 2, PlateFolders, Stackers and Collector — all synchronized off the Main Pull master axis, running up to 40 sheets per minute.</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technology</h3>
+        <ul>
+          <li>Allen-Bradley ControlLogix 1756-L71, Kinetix 6500, PowerFlex 525</li>
+          <li>1326 AB servomotors over EtherNet/IP with CIP-Motion</li>
+          <li>Remote I/O (FlexIO) on a star/ring network topology</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Deliverables</h3>
+        <ul>
+          <li>Full electrical and mechanical diagrams</li>
+          <li>Operating manual and troubleshooting guide</li>
+        </ul>
+      </div>
+
+      <div class="gallery">
+        <img src="../assets/projects/motion-control-migration-fandfold/motion-control-migration-fandfold-1.jpg" alt="New ControlLogix and Kinetix 6500 control panel">
+        <img src="../assets/projects/motion-control-migration-fandfold/motion-control-migration-fandfold-2.jpg" alt="Original obsolete 1394 servo drive panel before migration">
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Industry</h4>
+        <div class="val">Semi-pharmaceutical — surgical drape manufacturing</div>
+        <h4 style="margin-top:16px;">Platform</h4>
+        <div class="val">Allen-Bradley ControlLogix / Kinetix 6500</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Lead engineer, motion migration</div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">8</div><div class="lbl">Coordinated motion axes</div></div>
+        <div class="metric"><div class="num">14 days</div><div class="lbl">Commissioning window</div></div>
+        <div class="metric"><div class="num">40/min</div><div class="lbl">Sheets — production rate maintained</div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

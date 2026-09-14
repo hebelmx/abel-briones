@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi-Machine OEE Reporting Platform — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">Multi-Machine OEE Data Collection &amp; Reporting Platform</h1>
+    <div class="detail-tags">
+      <span class="chip">Software &amp; AI</span>
+      <span class="chip">VB.NET</span>
+      <span class="chip">SQL Server</span>
+      <span class="chip">Steel / Wire Products</span>
+    </div>
+    <p class="detail-summary">DeAcero's galvanized welded-mesh production had no OEE visibility across its 6 mesh-weaving machines. I designed and built a full VB.NET application suite backed by a central SQL Server database that talks to each machine's PLC, captures piece counts, cycle times, downtime and operator logins, and serves live per-machine OEE dashboards.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>VB.NET applications communicating directly with each machine's PLC.</li>
+          <li>A central SQL Server database for production, downtime, maintenance and operator data.</li>
+          <li>A full application suite: Catálogos (catalog admin), Ideas (improvement suggestions), Mantenimiento (maintenance scheduling), Monitor (diagnostics), Paros (downtime logging), Publisher (over-the-air app updates), Producción (production scheduling), Raw Material, Main (live operator HMI), Reports (auto-emailed), and Turnos (shift scheduling).</li>
+          <li>Live OEE dashboards per machine — availability, performance, quality and overall OEE %.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Architecture</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">Each of the 6 machines has its own PLC+PC pair feeding a central SQL Server database, which drives both real-time dashboards on the plant floor and scheduled, automatically emailed reports to management.</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technology</h3>
+        <ul>
+          <li>VB.NET desktop applications</li>
+          <li>Microsoft SQL Server</li>
+          <li>PLC-to-PC communication, web/desktop dashboards</li>
+        </ul>
+      </div>
+
+      <div class="gallery">
+        <img src="../assets/projects/oee-production-reporting-system/oee-production-reporting-system-1.jpg" alt="Live OEE dashboard showing six mesh-weaving machines">
+        <img src="../assets/projects/oee-production-reporting-system/oee-production-reporting-system-2.jpg" alt="Galvanized wire coil production floor">
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Client</h4>
+        <div class="val">DeAcero — steel &amp; wire products</div>
+        <h4 style="margin-top:16px;">Platform</h4>
+        <div class="val">VB.NET / SQL Server</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Lead engineer, full-stack data platform</div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">6</div><div class="lbl">Machines instrumented</div></div>
+        <div class="metric"><div class="num">11</div><div class="lbl">Applications in the delivered suite</div></div>
+      </div>
+      <div class="side-box">
+        <p style="margin:0; font-size:0.88rem; color:var(--text-dim);">Client satisfaction rated "very high," despite a 1-month schedule extension driven by client-requested feature additions.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

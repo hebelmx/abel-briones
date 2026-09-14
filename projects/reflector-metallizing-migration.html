@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Headlamp Reflector Metallizer Control Migration — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">Control Migration — Automotive Headlamp Reflector Vacuum Metallizer</h1>
+    <div class="detail-tags">
+      <span class="chip">Automation</span>
+      <span class="chip">Allen-Bradley</span>
+      <span class="chip">Controls Migration</span>
+      <span class="chip">Automotive Lighting</span>
+    </div>
+    <p class="detail-summary">A vacuum-metallizing machine that aluminizes plastic headlamp reflectors for a leading automotive lighting manufacturer was running on an obsolete Siemens TI 545 PLC with an aging UniOP HMI. I migrated control to Allen-Bradley CompactLogix with a larger PanelView Plus 6 touchscreen, replicating the full multi-stage vacuum sequence with a 5-day commissioning window and no throughput loss.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>Migrated the Siemens TI500 PLC to a CompactLogix L3ER.</li>
+          <li>Migrated the UniOP HMI to a 15" PanelView Plus 6.</li>
+          <li>Replicated the multi-stage vacuum-metallizing sequence: rough vacuum → crossover → fine vacuum → preheat → flashing → plasil coat → vent.</li>
+          <li>Commissioned within 5 days without reducing throughput.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Architecture</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">The vacuum-chamber sequence — rough/fine vacuum, glow discharge, filament preheat, aluminum flashing/evaporation, plasil top-coat, and chamber vent — is monitored from a single PanelView screen showing live vacuum gauges and pump/valve states.</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technology</h3>
+        <ul>
+          <li>Allen-Bradley CompactLogix L3ER</li>
+          <li>PanelView Plus 6 (15")</li>
+          <li>EtherNet/IP</li>
+        </ul>
+      </div>
+
+      <div class="gallery">
+        <img src="../assets/projects/reflector-metallizing-migration/reflector-metallizing-migration-1.jpg" alt="New CompactLogix control cabinet installed on the metallizing machine">
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Industry</h4>
+        <div class="val">Automotive lighting manufacturing</div>
+        <h4 style="margin-top:16px;">Platform</h4>
+        <div class="val">Allen-Bradley CompactLogix L3ER</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Lead engineer, controls migration</div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">5 days</div><div class="lbl">Commissioning window</div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

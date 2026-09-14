@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi-Line Traceability System — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">Multi-Line Traceability System — Automotive Lighting Assembly</h1>
+    <div class="detail-tags">
+      <span class="chip">Traceability</span>
+      <span class="chip">Industry 4.0</span>
+      <span class="chip">Valeo</span>
+      <span class="chip">2023</span>
+    </div>
+    <p class="detail-summary">Developed and deployed an integrated traceability system across three assembly lines — CHMSL Q5, Bumper Lamp, and Spoiler — for Valeo Special Products, capturing component genealogy in real time from Siemens S7-1200 PLCs and generating production and quality reports.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>Network cabling and canalization for an Ethernet backbone across all three lines.</li>
+          <li>Server and node configuration; code-reader and label-printer mounting hardware.</li>
+          <li>PLC/HMI programming for real-time data capture.</li>
+          <li>FAT/SAT and operator training.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Architecture</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">Each line's PLC pushes component and process data over a dedicated Ethernet backbone into a central traceability server, which flags out-of-spec parameters in real time and generates scrap and cycle-time reports.</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technology</h3>
+        <ul>
+          <li>Siemens S7-1200</li>
+          <li>Ethernet networking</li>
+          <li>Barcode/label-printing hardware, SQL-based reporting</li>
+        </ul>
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Client</h4>
+        <div class="val">Valeo Special Products, Querétaro</div>
+        <h4 style="margin-top:16px;">Contact</h4>
+        <div class="val">Ing. Fabián Hernández Ramos</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Lead engineer, traceability system design</div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">3</div><div class="lbl">Production lines covered</div></div>
+        <div class="metric"><div class="num">Jul–Nov 2023</div><div class="lbl">Delivery window</div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

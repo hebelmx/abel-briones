@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automated Photometric Inspection Station — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">Automated Photometric Inspection Station — 4-Position Index Table</h1>
+    <div class="detail-tags">
+      <span class="chip">Machine Design</span>
+      <span class="chip">Siemens S7-1200</span>
+      <span class="chip">Valeo</span>
+      <span class="chip">2022–2023</span>
+    </div>
+    <p class="detail-summary">Designed, built and programmed a 4-position indexing photometric test station for Valeo Sistemas Eléctricos to automatically inspect three automotive headlamp models (LB Spot, LB Wide, HB) — including validating and correcting deficiencies in a design the client had already supplied.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>Mechanical design and fabrication of a 4-station index table with quick-disconnect nests and Dajac alignment.</li>
+          <li>Electrical panel design and assembly, plus the pneumatic clamping system.</li>
+          <li>PLC/HMI programming for manual and automatic sequencing.</li>
+          <li>Safety light-curtain and e-stop integration.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Architecture</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">The 4-position indexing table carries two part nests per station. Each position aligns the headlamp via Dajac sensors before photometric measurement; the PLC drives indexing, clamping and safety interlocks, with dedicated HMI screens for process, manual, alarms and I/O.</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technology</h3>
+        <ul>
+          <li>Siemens S7-1200, Simatic HMI</li>
+          <li>Safety light curtain, e-stops</li>
+          <li>Dajac alignment sensors, pneumatic clamping</li>
+        </ul>
+      </div>
+
+      <div class="gallery">
+        <img src="../assets/projects/photometry-inspection-station-valeo/photometry-inspection-station-valeo-1.jpg" alt="Wired Siemens PLC rack for the inspection station">
+        <img src="../assets/projects/photometry-inspection-station-valeo/photometry-inspection-station-valeo-2.jpg" alt="Control panel with Dajac Expert I/O 1000 and Siemens PLCs">
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Client</h4>
+        <div class="val">Valeo Sistemas Eléctricos, Querétaro</div>
+        <h4 style="margin-top:16px;">Contact</h4>
+        <div class="val">Ing. Fabián Hernández Ramos</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Lead engineer, mechanical &amp; controls design</div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">3</div><div class="lbl">Headlamp models inspected</div></div>
+        <div class="metric"><div class="num">Dec 2022 – Apr 2023</div><div class="lbl">Delivery window</div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vertical Press for Light-Guide Component Clipping — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">Vertical Press for Automotive Light-Guide Component Clipping</h1>
+    <div class="detail-tags">
+      <span class="chip">Machine Design</span>
+      <span class="chip">Modular Tooling</span>
+      <span class="chip">Valeo · Stellantis Jeep</span>
+      <span class="chip">2023–2024</span>
+    </div>
+    <p class="detail-summary">Designed, built and programmed a vertical press with modular, interchangeable tooling to clip PCB/Carrier/Light-Guide components for Valeo Special Products' Stellantis Jeep production line — cutting cycle time and defects versus the prior process.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>PTR structural frame with a vertical press mechanism.</li>
+          <li>Modular upper/lower tooling supporting multiple part variants.</li>
+          <li>Acrylic guarding and pneumatic actuation.</li>
+          <li>PLC/HMI programming for manual/automatic sequencing.</li>
+          <li>Safety light curtains and e-stops.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Architecture</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">The press indexes interchangeable upper/lower tool sets to clip different part variants; the PLC monitors clip distance and pneumatic pressure every cycle and verifies OK/NOK before releasing the part.</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technology</h3>
+        <ul>
+          <li>Siemens S7-1200</li>
+          <li>Safety light curtains, pneumatic press actuators</li>
+          <li>Modular, quick-change tooling</li>
+        </ul>
+      </div>
+
+      <div class="gallery">
+        <img src="../assets/projects/vertical-press-clipping-valeo/vertical-press-clipping-valeo-1.jpg" alt="Twin vertical press stations on the production floor">
+        <img src="../assets/projects/vertical-press-clipping-valeo/vertical-press-clipping-valeo-2.jpg" alt="CAD design of the modular clipping tooling">
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Client</h4>
+        <div class="val">Valeo Special Products (Stellantis Jeep line)</div>
+        <h4 style="margin-top:16px;">Contact</h4>
+        <div class="val">Ing. Fabián Hernández Ramos</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Lead engineer, machine design &amp; controls</div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">Sep 2023 – Jul 2024</div><div class="lbl">Execution window</div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

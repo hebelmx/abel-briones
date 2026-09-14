@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chromatic Classification Gateway — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">Chromatic Classification Gateway &amp; Automated Label Printing</h1>
+    <div class="detail-tags">
+      <span class="chip">Software</span>
+      <span class="chip">Quality Automation</span>
+      <span class="chip">Valeo</span>
+      <span class="chip">2023</span>
+    </div>
+    <p class="detail-summary">Valeo Special Products' Querétaro plant classified headlamp photometry results into color-coded quality bands by hand. I built a Linux-based gateway that reads results straight from Valeo's Edixia measurement system, classifies each unit automatically, and prints the matching color label in real time on the Red Lux and BRP lines.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>Linux software development integrating directly with Valeo's Edixia photometry system.</li>
+          <li>Comparison logic classifying each unit against predefined tolerance ranges.</li>
+          <li>ZPL label design and real-time printing to an Epson ColorWorks C6500.</li>
+          <li>Gateway installation inside production control panels, functional validation, documentation and operator training.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Architecture</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">The gateway receives luminosity coordinates from the Edixia system and classifies them into color-coded quality bands (green/yellow/orange/white/purple) against predefined tolerance ranges, driving a ZPL-programmed label printer in real time — no manual sorting step required.</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technology</h3>
+        <ul>
+          <li>Linux gateway software</li>
+          <li>Epson ColorWorks C6500 label printer, ZPL</li>
+          <li>Integration with Valeo's Edixia photometry system</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Result</h3>
+        <ul>
+          <li>Reduced manual processing and labeling time.</li>
+          <li>Standardized QC classification by color code.</li>
+          <li>Compact, portable hardware, adaptable to other lines.</li>
+        </ul>
+      </div>
+
+      <div class="gallery">
+        <img src="../assets/projects/chromatic-label-gateway-valeo/chromatic-label-gateway-valeo-1.jpg" alt="BRP Lux ST700 headlamp fixture with classification tooling">
+        <img src="../assets/projects/chromatic-label-gateway-valeo/chromatic-label-gateway-valeo-2.jpg" alt="Edixia photometry and Siemens HMI screens on the line">
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Client</h4>
+        <div class="val">Valeo Special Products, Querétaro</div>
+        <h4 style="margin-top:16px;">Contacts</h4>
+        <div class="val">Ing. Fabián Hernández Ramos, Ing. Lisset Camacho</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Lead engineer, gateway design &amp; development</div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">Apr–Jul 2023</div><div class="lbl">Execution window</div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

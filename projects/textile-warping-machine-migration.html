@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Textile Warping Machine Control Recovery — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">Recovering a Locked-Out Control System — Textile Yarn-Warping Machine</h1>
+    <div class="detail-tags">
+      <span class="chip">Siemens</span>
+      <span class="chip">Reverse Engineering</span>
+      <span class="chip">Controls Migration</span>
+      <span class="chip">Textile</span>
+    </div>
+    <p class="detail-summary">A yarn-warping machine's Siemens S7-200 PLC was password-locked with no recoverable credentials — the plant had no way to maintain or modify it. I reverse-engineered the machine's control logic from its physical behavior and re-implemented it from scratch on a Siemens S7-1200 with a TP700 panel, reusing the existing drives and motors to keep the project on budget.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>Reprogrammed the machine's control logic entirely from scratch — the original PLC program was inaccessible.</li>
+          <li>Migrated from Siemens S7-200 to S7-1200 with a TP700 HMI panel.</li>
+          <li>Reused the existing Fuji servo drive, Meiden AC drive, and motors to control project cost.</li>
+          <li>Improved fault and alarm capture versus the original, undocumented system.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Architecture</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">The new S7-1200 controls the winding drum, thread-tensioning brake, horizontal drum traverse, and fold-plate hydraulics, all connected to the TP700 HMI over Ethernet.</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technology</h3>
+        <ul>
+          <li>Siemens S7-1200, TP700 HMI</li>
+          <li>Fuji Electric servo drive, Meiden AC drive (reused)</li>
+          <li>EtherNet</li>
+        </ul>
+      </div>
+
+      <div class="gallery">
+        <img src="../assets/projects/textile-warping-machine-migration/textile-warping-machine-migration-1.jpg" alt="New Meiden AC drive and control panel">
+        <img src="../assets/projects/textile-warping-machine-migration/textile-warping-machine-migration-2.jpg" alt="Siemens S7-1200 PLC rack and Faldic servo drive">
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Industry</h4>
+        <div class="val">Textile — yarn warping / winding</div>
+        <h4 style="margin-top:16px;">Platform</h4>
+        <div class="val">Siemens S7-1200 / TP700</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Lead engineer, reverse engineering &amp; migration</div>
+      </div>
+      <div class="side-box">
+        <p style="margin:0; font-size:0.88rem; color:var(--text-dim);">The original control program could not be recovered — the full machine logic was rebuilt from observed behavior, not from existing source code.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>
