@@ -152,26 +152,38 @@
     <div class="section-head">
       <span class="kicker">Engineering Methodology</span>
       <h2 class="section-title">Speed comes from not solving the wrong problem</h2>
-      <p class="section-desc">Developed and institutionalized structured engineering methodologies for problem definition, hypothesis-driven troubleshooting, risk-controlled experimentation, verification, validation and lessons learned — turning individual engineering instinct into a repeatable process.</p>
+      <p class="section-desc">In 2013 I personally authored and formalized <em>"Metodología para resolver un problema de automatización"</em> — an ISO&nbsp;9001-referenced Exxerpro internal procedure (FR-PYT-SRV-01) — to turn root-cause troubleshooting from individual engineering instinct into a repeatable, teachable 10-step process, plus a named set of reasoning models engineers are asked to apply during analysis.</p>
     </div>
-    <div class="ladder">
-      <div class="rung">Observe</div>
-      <div class="rung">Define actual vs. desired state</div>
-      <div class="rung">Gather evidence</div>
-      <div class="rung">Understand context &amp; consequences</div>
-      <div class="rung">Reproduce</div>
-      <div class="rung">Decompose system</div>
-      <div class="rung">Generate competing causes</div>
-      <div class="rung">Rank hypotheses</div>
-      <div class="rung">Design discriminating tests</div>
-      <div class="rung">Assess experiment risk</div>
-      <div class="rung now">Act</div>
-      <div class="rung">Monitor</div>
-      <div class="rung">Verify</div>
-      <div class="rung">Validate</div>
-      <div class="rung">Adjust</div>
-      <div class="rung now">Document lessons</div>
+
+    <ol class="method-steps">
+      <li class="method-step"><span class="num">1</span><div class="body"><h4>Preparation</h4><p>Confirm equipment, personnel, tools, software, safety gear, time and mindset are all ready before touching anything.</p></div></li>
+      <li class="method-step"><span class="num">2</span><div class="body"><h4>Damage-control plan</h4><p>Assess the risk of any intervention before acting. Never make an irreversible change without the client's explicit, written acceptance of the risk and consequences.</p></div></li>
+      <li class="method-step"><span class="num">3</span><div class="body"><h4>Complete, objective description of the symptoms</h4><p>A structured interview, not a guess — how and when it was first observed, whether it's reproducible, recurring or random, correlated with other events, tied to recent changes, or varies by operator, product or time of day.</p></div></li>
+      <li class="method-step"><span class="num">4</span><div class="body"><h4>Document the current state of the equipment</h4><p>Back up programs, current configuration and process parameters, and capture the last known-good state if it exists.</p></div></li>
+      <li class="method-step"><span class="num">5</span><div class="body"><h4>Verify the system operates to specification</h4><p>Check operating parameters and end-of-life components before assuming a deeper fault.</p></div></li>
+      <li class="method-step"><span class="num">6</span><div class="body"><h4>Analyze and reproduce the symptoms</h4><p>Reproduce the failure and document it as completely as possible — record, photograph or film it, and capture every alarm.</p></div></li>
+      <li class="method-step"><span class="num">7</span><div class="body"><h4>Delimit the fault to its root cause</h4><p>Three passes: fix any obvious component damage first; run a failure-mode analysis (list candidate causes most- to least-probable, design the simplest conclusive test for each); then a subsystem analysis (isolate and test each component, most- to least-likely). Still unresolved? Assume you made a mistake, not that the fault is unfindable — re-check your own elimination logic, widen the candidate lists, and reconsider system inputs and interactions with other systems.</p></div></li>
+      <li class="method-step"><span class="num">8</span><div class="body"><h4>Document the problem and the solution</h4><p>Write it up and build guides so the same fault is prevented or resolved faster next time.</p></div></li>
+      <li class="method-step"><span class="num">9</span><div class="body"><h4>Review the process itself</h4><p>A deliberate retrospective — which steps or ideas helped or hindered the investigation, what to improve, and setting concrete commitments to do so.</p></div></li>
+      <li class="method-step"><span class="num">10</span><div class="body"><h4>Close out</h4><p>Confirm the fix with the team, celebrate the result, and formalize the documentation.</p></div></li>
+    </ol>
+
+    <div class="section-head" style="margin-top:56px; margin-bottom:28px;">
+      <span class="kicker">Thinking Models</span>
+      <h2 class="section-title" style="font-size:1.3rem;">Reasoning modes applied during root-cause analysis</h2>
     </div>
+    <div class="thinking-grid">
+      <div class="thinking-card"><h4>Deductive</h4><p>General to particular — a conclusion drawn from one or more premises.</p></div>
+      <div class="thinking-card"><h4>Inductive</h4><p>The reverse — reasoning from particular observations toward a general rule.</p></div>
+      <div class="thinking-card"><h4>Analytical</h4><p>Separating a whole into identifiable, categorized parts.</p></div>
+      <div class="thinking-card"><h4>Synthetic</h4><p>Moving from the simple to the composite — parts to whole, cause to effect.</p></div>
+      <div class="thinking-card"><h4>Systemic</h4><p>Viewing a complex set of elements through their interrelations, not in isolation.</p></div>
+      <div class="thinking-card"><h4>Critical</h4><p>Examining the structure of an argument itself — deciding what you actually believe, and why.</p></div>
+      <div class="thinking-card"><h4>Creative</h4><p>Producing new ideas to develop or modify something that already exists.</p></div>
+      <div class="thinking-card"><h4>Instinctive</h4><p>The immediate, unreasoned response most living things default to.</p></div>
+      <div class="thinking-card"><h4>Interrogative</h4><p>Reasoning driven by asking the right questions about what you need to know.</p></div>
+    </div>
+    <p style="color:var(--text-dimmer); font-size:0.8rem; margin-top:20px; max-width:74ch;">Source procedure formally ties "sistema" and "proceso" to ISO 9001:2005 §3.2.1/§3.4.1 — the same ISO-literacy reflected in the Expertise section above.</p>
   </div>
 </section>
 
