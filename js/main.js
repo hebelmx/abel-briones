@@ -45,7 +45,7 @@
       btn.classList.add('active');
       var f = btn.getAttribute('data-filter');
       cards.forEach(function (card) {
-        var tags = (card.getAttribute('data-tags') || '');
+        var tags = (card.getAttribute('data-tags') || '').split(' ');
         card.style.display = (f === 'all' || tags.indexOf(f) !== -1) ? '' : 'none';
       });
     });
