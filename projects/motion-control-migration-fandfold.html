@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FandFold Motion Control Migration — Abel Briones Ramírez</title>
+<title>Motion Control Migration — 8 Axes, 13 Servo Drives — Abel Briones Ramírez</title>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -28,14 +28,14 @@
 <header class="detail-hero">
   <div class="wrap">
     <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
-    <h1 class="detail-title">8-Axis Motion Control Migration — Surgical-Drape Folding Machine</h1>
+    <h1 class="detail-title">Motion Control Migration — Surgical-Drape Folding Machine</h1>
     <div class="detail-tags">
       <span class="chip">Motion Control</span>
       <span class="chip">Allen-Bradley</span>
       <span class="chip">Controls Migration</span>
       <span class="chip">Medical / Semi-Pharma</span>
     </div>
-    <p class="detail-summary">A surgical operating-room drape folding machine was running on a discontinued Allen-Bradley SLC 500 platform with obsolete 1394 motion drives — a serious unplanned-downtime risk once spare parts ran out. I migrated the full 8-axis motion system to ControlLogix and Kinetix 6500 in a 14-day window, without giving up a single sheet per minute of production rate.</p>
+    <p class="detail-summary">A surgical operating-room drape folding machine was running on a discontinued Allen-Bradley SLC 500 platform with obsolete 1394 motion drives — a serious unplanned-downtime risk once spare parts ran out. I migrated the full motion system — 8 coordinated machine axes implemented using 13 servo drives/motors — to ControlLogix and Kinetix 6500 in a 14-day window, without giving up a single sheet per minute of production rate.</p>
   </div>
 </header>
 
@@ -47,8 +47,8 @@
         <ul>
           <li>Migrated the SLC 500 PLC to a ControlLogix 1756-L71.</li>
           <li>Migrated the 10" PanelView 1000 HMI.</li>
-          <li>Migrated 13 servo drives (1394 family) to Kinetix 6500.</li>
-          <li>Migrated 13 servomotors (1326 family) plus 3 AC induction motor drives.</li>
+          <li>Migrated 13 servo drives and servomotors (1394/1326 family) to Kinetix 6500 — the drivetrain for the machine's 8 coordinated motion axes.</li>
+          <li>Migrated 3 additional AC induction motor drives to PowerFlex 525 (non-motion auxiliary drives on the same platform).</li>
           <li>Designed, fabricated and installed a new control panel, shipped from our shop to the plant.</li>
           <li>Commissioned within 14 days with zero reduction in production capability.</li>
         </ul>
@@ -56,7 +56,7 @@
 
       <div class="detail-block">
         <h3>Motion Architecture</h3>
-        <p style="color:var(--text-dim); font-size:0.94rem;">Eight coordinated axes — Unwinder, Folders/AuxPull, Main Pull (master axis), Cross-Cutter (running a non-linear electronic-cam profile), Separator, Diverter, Crossfolder 1 &amp; 2, PlateFolders, Stackers and Collector — all synchronized off the Main Pull master axis, running up to 40 sheets per minute.</p>
+        <p style="color:var(--text-dim); font-size:0.94rem;"><strong>8 coordinated machine axes, implemented using 13 servo drives/motors:</strong> the line's motion functions — Unwinder, Folders/AuxPull, Main Pull (master axis), Cross-Cutter (running a non-linear electronic-cam profile), Separator, Diverter, Crossfolder 1 &amp; 2, PlateFolders, Stackers and Collector — are synchronized off the Main Pull master axis, running up to 40 sheets per minute. (The project's technical documentation names more individual mechanical stations than motion axes and more servo drives/motors than named axes; some stations are geared from, or share, a single servo axis. The original delivery record states both "8-axis" and "13 servo drives" without itemizing exactly which drives map to which named axis, so that precise mapping isn't reconstructed here — only the two headline counts are stated, each accurately, as the source documents them.)</p>
       </div>
 
       <div class="detail-block">
@@ -92,7 +92,7 @@
         <div class="val">Lead engineer, motion migration</div>
       </div>
       <div class="metric-row" style="flex-direction:column;">
-        <div class="metric"><div class="num">8</div><div class="lbl">Coordinated motion axes</div></div>
+        <div class="metric"><div class="num">8 / 13</div><div class="lbl">Coordinated machine axes / servo drives &amp; motors migrated</div></div>
         <div class="metric"><div class="num">14 days</div><div class="lbl">Commissioning window</div></div>
         <div class="metric"><div class="num">40/min</div><div class="lbl">Sheets — production rate maintained</div></div>
       </div>
