@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regulatory Compliance &amp; Document-Intelligence Platform — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">Regulatory Compliance &amp; Document-Intelligence Platform</h1>
+    <div class="detail-tags">
+      <span class="chip">Software &amp; AI</span>
+      <span class="chip">.NET 10</span>
+      <span class="chip">Hexagonal Architecture</span>
+      <span class="chip">Financial Services</span>
+      <span class="chip">2025–2026</span>
+    </div>
+    <p class="detail-summary">Architected and directed development of a document-intelligence platform for a major Mexican financial institution (name withheld), built on a shared hexagonal-architecture .NET foundation to address two related regulatory-compliance needs: processing official information requests from banking authorities, and automating the quality verification of customer account statements.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>Prisma — Regulatory Request Processing</h3>
+        <ul>
+          <li>Ingests official information requests ("oficios") from Mexican banking regulators regarding disputed customer transactions.</li>
+          <li>Extracts and validates document data through an OCR and document-intelligence pipeline.</li>
+          <li>Reconciles extracted data against internal records and generates regulator-compliant response documents.</li>
+          <li>Validated end-to-end against a purpose-built simulator of the regulator's submission portal.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Veriqan VEC — Statement Verification</h3>
+        <ul>
+          <li>Automates the quality check banks are required to perform on customer account statements before issuance — arithmetic accuracy, customer data, formatting and required legal disclosures.</li>
+          <li>Applies a configurable, bank-specific rules checklist to each statement and produces a findings report.</li>
+          <li>Flags exceptions for human review rather than making a final accept/reject decision on its own, keeping a qualified analyst in the loop for regulatory judgment calls.</li>
+          <li>"VEC" stands for <em>Verificación de Estado de Cuenta</em> — Account Statement Verification.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Architecture</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">Both products share a common hexagonal-architecture .NET foundation and document-processing pipeline, with Veriqan built as an additional module on top of the platform originally developed for regulatory-request processing. Ingestion, processing and validation are separated into independent stages, using a functional error-handling model (Result&lt;T&gt;) in place of exceptions for business logic, with full observability instrumentation throughout.</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technology</h3>
+        <ul>
+          <li>.NET 10 / C#, hexagonal / clean architecture</li>
+          <li>Blazor (MudBlazor) web interface</li>
+          <li>OCR and document-AI processing (Python interop)</li>
+          <li>Event-driven processing (Rx.NET)</li>
+          <li>xUnit v3, Serilog, OpenTelemetry</li>
+        </ul>
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Client</h4>
+        <div class="val">Major Mexican financial institution (name withheld)</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Architected and directed development, including AI-agent-assisted implementation</div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">2</div><div class="lbl">Related compliance capabilities on one shared platform</div></div>
+        <div class="metric"><div class="num">24</div><div class="lbl">Architecture decision records documented</div></div>
+        <div class="metric"><div class="num">1,000+</div><div class="lbl">Engineering commits directed</div></div>
+      </div>
+      <p style="color:var(--text-dim); font-size:0.78rem; margin-top:4px;">Client name withheld by request. Happy to discuss further scope and status in conversation.</p>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>
