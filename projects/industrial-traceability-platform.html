@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IndTrace — Industrial Traceability &amp; Production-Monitoring Platform — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">IndTrace — Industrial Traceability &amp; Production-Monitoring Platform</h1>
+    <div class="detail-tags">
+      <span class="chip">Traceability</span>
+      <span class="chip">Industry 4.0</span>
+      <span class="chip">.NET 10</span>
+      <span class="chip">Real-Time Systems</span>
+      <span class="chip">2025–2026</span>
+    </div>
+    <p class="detail-summary">Architected and directed development of <strong>IndTrace</strong>, a multi-tenant industrial traceability and production-monitoring platform at Exxerpro — evolved from traceability work originally built for <a href="traceability-system-valeo-lighting.html">Valeo Special Products</a> into a reusable platform architecture for tracking parts, cycles, and production events across PLC-connected manufacturing lines.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>Real-time data capture from PLCs across production lines, tracking machines, cycles, defects, and routing rules.</li>
+          <li>Multi-tenant architecture, allowing the platform to serve more than one manufacturing operation from a single codebase.</li>
+          <li>OEE (Overall Equipment Effectiveness) dashboards, production-line monitoring, and a diagnostic log analyzer.</li>
+          <li>Built around a deliberate design principle: the system <strong>tracks and validates</strong> that a part's arrival at a station is legal per its routing — it does not command or control the line itself.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Architecture</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">Built on a hexagonal .NET foundation with an event-driven PLC gateway feeding real-time production data into the platform, keeping the tracking layer strictly separate from line control — the system observes and validates, it never issues commands to equipment.</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technology</h3>
+        <ul>
+          <li>.NET 10 / C#, hexagonal / clean architecture</li>
+          <li>Blazor (MudBlazor), SignalR for real-time updates</li>
+          <li>SQL Server</li>
+          <li>xUnit</li>
+        </ul>
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Client</h4>
+        <div class="val">Platform evolved from an Exxerpro traceability engagement for <a href="traceability-system-valeo-lighting.html">Valeo Special Products</a></div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Architected and directed development at Exxerpro, with a collaborator contributing early UI and PLC-integration work</div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">43</div><div class="lbl">Domain tables — machines, lines, recipes, cycles, defects, rules</div></div>
+        <div class="metric"><div class="num">25+18</div><div class="lbl">Production and test projects in the solution</div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>

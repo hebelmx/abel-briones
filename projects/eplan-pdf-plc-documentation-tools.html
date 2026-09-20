@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EPLAN Engineering Tools — PDF-to-DXF &amp; PLC Documentation Automation — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">EPLAN Engineering Tools — PDF-to-DXF &amp; PLC Documentation Automation</h1>
+    <div class="detail-tags">
+      <span class="chip">Software</span>
+      <span class="chip">Python</span>
+      <span class="chip">Open Source</span>
+      <span class="chip">Electrical Automation</span>
+      <span class="chip">2026</span>
+    </div>
+    <p class="detail-summary">Reverse-engineered EPLAN's proprietary PDF text encoding to recover accurate vector and text data from exported electrical schematics — where standard extractors, and even paid commercial tools, fail — and built a toolchain that converts Rockwell and Siemens PLC exports directly into EPLAN import data and complete QElectroTech CAD documentation.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>Cracked EPLAN's custom PDF glyph encoding by parsing the raw PDF content stream directly, recovering accurate vector geometry and text that standard extractors — and commercial tools — garble.</li>
+          <li>Built converters from Rockwell Studio 5000 (L5X) and Siemens S7-300/TIA Portal PLC exports into EPLAN-compatible import data and complete QElectroTech drawing sets: cover sheet, symbol legend, per-module I/O folios, terminal strips, and bill of materials.</li>
+          <li>Data-driven symbol and pin matching against vendor reference tables, deliberately avoiding low-confidence guesses — unmatched items are left explicit rather than silently assumed.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Architecture</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">EPLAN's PDF export uses a custom-embedded font with no standard character mapping, defeating ordinary text extraction. The tool parses the PDF's raw content stream — tracking the graphics-state and text-transformation operators directly — to recover exact vector geometry and character data, then feeds that into per-vendor converters that translate PLC I/O and tag data into CAD-ready drawing sets.</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technology</h3>
+        <ul>
+          <li>Python 3.10+</li>
+          <li>PyMuPDF (PDF content-stream parsing)</li>
+          <li>ezdxf (DXF generation)</li>
+          <li>QElectroTech (open-source CAD format)</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Result</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">On the bundled reference project, the tool generates a complete 32-folio QElectroTech drawing set from a single Rockwell L5X export.</p>
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Client</h4>
+        <div class="val">REFORM Maschinenfabrik</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Sole developer — personal project built while at Exxerpro Solutions</div>
+        <h4 style="margin-top:16px;">Links</h4>
+        <div class="val"><a href="https://github.com/hebelmx/PdfEplanToDxF" target="_blank" rel="noopener">Source on GitHub</a></div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">3</div><div class="lbl">PLC vendor paths supported — EPLAN, Rockwell, Siemens</div></div>
+        <div class="metric"><div class="num">32</div><div class="lbl">Folios generated on the reference project, from one L5X export</div></div>
+        <div class="metric"><div class="num">MIT</div><div class="lbl">Open source, public repository</div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>
