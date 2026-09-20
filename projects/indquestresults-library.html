@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IndQuestResults — Open-Source Result&lt;T&gt; Library — Abel Briones Ramírez</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="brand">Abel Briones <span class="dot">●</span> Ramírez</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#competencies">Expertise</a></li>
+      <li><a href="../index.html#projects">Projects</a></li>
+      <li><a href="../index.html#testimonials">Testimonials</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      <button class="menu-btn" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<header class="detail-hero">
+  <div class="wrap">
+    <a href="../index.html#projects" class="breadcrumb">← Back to projects</a>
+    <h1 class="detail-title">IndQuestResults — Open-Source Result&lt;T&gt; Library for .NET</h1>
+    <div class="detail-tags">
+      <span class="chip">Open Source</span>
+      <span class="chip">.NET 10</span>
+      <span class="chip">NuGet</span>
+      <span class="chip">Functional Programming</span>
+      <span class="chip">2025–2026</span>
+    </div>
+    <p class="detail-summary">Designed, built and published <strong>IndQuestResults</strong> — a zero-dependency, functional <code>Result&lt;T&gt;</code> error-handling library for .NET — released under Exxerpro on NuGet.org through a fully automated release pipeline. Sole author and maintainer, from initial design through every published release.</p>
+  </div>
+</header>
+
+<section style="padding-top:56px;">
+  <div class="wrap detail-grid">
+    <div>
+      <div class="detail-block">
+        <h3>Scope of Work</h3>
+        <ul>
+          <li>Designed a unified <code>Result&lt;T&gt;</code> API — Map/Bind/Match/Recover, async support via <code>ResultAsync</code>, collection-traversal helpers, and a reactive/Observable bridge — with zero runtime dependencies.</li>
+          <li>Shipped a companion Roslyn analyzer with an automated code-fix to guide correct usage at compile time.</li>
+          <li>Built and maintain the release pipeline: tag-triggered GitHub Actions publishing straight to NuGet.org via OIDC Trusted Publishing.</li>
+          <li>Audited the reactive-extension layer for exception-handling correctness, found a case where stream errors were silently converted into false successes, and shipped the fix.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Architecture</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">Built around railway-oriented programming — chaining operations so failures short-circuit predictably instead of relying on exceptions for control flow. Delivered as one unified package (core, async, collection, functional and reactive extensions together) rather than fragmented sub-packages, kept dependency-free by design, and mutation-tested and coverage-tracked as part of the CI process.</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>Technology</h3>
+        <ul>
+          <li>.NET 9 / 10, C#</li>
+          <li>xUnit v3, Stryker mutation testing</li>
+          <li>Roslyn analyzers &amp; code fixes</li>
+          <li>GitHub Actions, NuGet.org OIDC Trusted Publishing</li>
+        </ul>
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-box">
+        <h4>Client</h4>
+        <div class="val">Open source (self-directed, published under Exxerpro)</div>
+        <h4 style="margin-top:16px;">Role</h4>
+        <div class="val">Sole author and maintainer</div>
+        <h4 style="margin-top:16px;">Links</h4>
+        <div class="val"><a href="https://www.nuget.org/packages/IndQuestResults" target="_blank" rel="noopener">NuGet.org package</a></div>
+        <div class="val"><a href="https://github.com/Exxerpro/IndQuestResults" target="_blank" rel="noopener">Source on GitHub</a></div>
+      </div>
+      <div class="metric-row" style="flex-direction:column;">
+        <div class="metric"><div class="num">v1.7.0</div><div class="lbl">Latest published NuGet version</div></div>
+        <div class="metric"><div class="num">18</div><div class="lbl">Published releases, Sep 2025 – Jul 2026</div></div>
+        <div class="metric"><div class="num">2</div><div class="lbl">Other projects consuming this library — including <a href="regulatory-document-intelligence-platform.html">the Prisma/IndViSi compliance platform</a> and IndTraceV2026</div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap" style="width:100%;">
+    <span>© <span id="year"></span> Abel Briones Ramírez</span>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/main.js"></script>
+</body>
+</html>
