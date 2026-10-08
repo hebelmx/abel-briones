@@ -485,3 +485,9 @@ footer.site-footer a { color: var(--text-dim); text-decoration: none; }
   padding: 16px 24px 24px;
   gap: 16px;
 }
+
+/* Linked still from a project demo (regulatory platform page) */
+.demo-still { position: relative; display: block; margin: 20px 0 32px; border: 1px solid var(--border); overflow: hidden; }
+.demo-still img { display: block; width: 100%; height: auto; }
+.demo-still span { position: absolute; left: 16px; top: 16px; padding: 10px 16px; background: var(--accent); color: #04150e; font-weight: 700; font-size: 0.9rem; }
+.demo-still:hover span, .demo-still:focus-visible span { text-decoration: underline; }

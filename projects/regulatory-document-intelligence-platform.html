@@ -4,14 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Regulatory Compliance &amp; Document-Intelligence Platform — Abel Briones Ramírez</title>
-<meta name="description" content="Architected and directed development of a document-intelligence platform for a major Mexican financial institution (name withheld), built on a shared…">
+<meta name="description" content="Architected and directed a .NET 10 document-intelligence platform for a major Mexican financial institution. Its regulatory-request module, Prisma, is now source-available, with six demo videos.">
 <link rel="canonical" href="https://hebelmx.github.io/abel-briones/projects/regulatory-document-intelligence-platform.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Abel Briones Ramírez">
 <meta property="og:title" content="Regulatory Compliance &amp; Document-Intelligence Platform — Abel Briones Ramírez">
-<meta property="og:description" content="Architected and directed development of a document-intelligence platform for a major Mexican financial institution (name withheld), built on a shared…">
+<meta property="og:description" content="Architected and directed a .NET 10 document-intelligence platform for a major Mexican financial institution. Its regulatory-request module, Prisma, is now source-available, with six demo videos.">
+<meta property="og:image" content="https://hebelmx.github.io/abel-briones/assets/projects/regulatory-document-intelligence-platform/prisma-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:url" content="https://hebelmx.github.io/abel-briones/projects/regulatory-document-intelligence-platform.html">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -43,9 +46,14 @@
       <span class="chip">.NET 10</span>
       <span class="chip">Hexagonal Architecture</span>
       <span class="chip">Financial Services</span>
+      <span class="chip">Source-Available (PolyForm Noncommercial)</span>
       <span class="chip">2025–2026</span>
     </div>
     <p class="detail-summary">Architected and directed development of a document-intelligence platform for a major Mexican financial institution (name withheld), built on a shared hexagonal-architecture .NET foundation to address two related regulatory-compliance needs: processing official information requests from banking authorities, and automating the quality verification of customer account statements.</p>
+    <div class="hero-ctas" style="margin:24px 0 0;">
+      <a class="btn btn-primary" href="https://hebelmx.github.io/ExxerCube.Prisma/#demo" rel="noopener">Watch the Prisma demo</a>
+      <a class="btn btn-ghost" href="https://github.com/hebelmx/ExxerCube.Prisma" rel="noopener">View source on GitHub</a>
+    </div>
   </div>
 </header>
 
@@ -53,12 +61,29 @@
   <div class="wrap detail-grid">
     <div>
       <div class="detail-block">
+        <h3>The Challenge</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">Mexican banks receive a constant stream of legally binding requests from courts and authorities through the regulator's portal, each due within a few business days. Every request arrives as up to three files (a scanned PDF, a Word letter and an XML record) that should agree and often don't. Teams of lawyers and analysts were downloading, reading and retyping each case by hand, where one misread digit or missed deadline becomes a regulatory finding.</p>
+      </div>
+
+      <div class="detail-block">
+        <h3>My Role</h3>
+        <ul>
+          <li>Defined the product and its architecture end to end: a hexagonal .NET 10 core that knows nothing about the OCR engine, database or portal behind it.</li>
+          <li>Designed the security model the institution required: downloading, reading and deciding run as three separate processes, each with its own identity, passing signed, single-document handoffs and never storing portal credentials.</li>
+          <li>Designed the three-source reconciliation that turns imperfect OCR into answers a compliance team can defend, with conflicts sent to people rather than resolved silently.</li>
+          <li>Set the engineering bar: architecture rules enforced by tests, errors as values instead of exceptions, containerized integration tests and a full-pipeline gate against a portal simulator.</li>
+          <li>Directed AI-agent-assisted implementation at scale (1,000+ commits), with every agent result verified against builds, tests and git history.</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
         <h3>Prisma — Regulatory Request Processing</h3>
         <ul>
-          <li>Ingests official information requests ("oficios") from Mexican banking regulators regarding disputed customer transactions.</li>
-          <li>Extracts and validates document data through an OCR and document-intelligence pipeline.</li>
-          <li>Reconciles extracted data against internal records and generates regulator-compliant response documents.</li>
-          <li>Validated end-to-end against a purpose-built simulator of the regulator's submission portal.</li>
+          <li>Downloads the official requests ("oficios") that Mexican authorities send to financial institutions through the CNBV's SIARA portal — account freezes, unfreezes, information requests and transfers — each due in a few business days.</li>
+          <li>Reads each request's PDF, Word and XML versions, running scanned pages through image-quality analysis and OCR.</li>
+          <li>Reconciles the three sources field by field, flags conflicts for a reviewer instead of guessing, and counts the deadline in Mexican business days.</li>
+          <li>Exports responses in the regulator's formats (SIRO XML, Excel, PDF), with an append-only audit trail of every system and reviewer action.</li>
+          <li>Validated end-to-end against a purpose-built simulator of the regulator's portal.</li>
         </ul>
       </div>
 
@@ -73,6 +98,15 @@
       </div>
 
       <div class="detail-block">
+        <h3>Source-Available Release</h3>
+        <p style="color:var(--text-dim); font-size:0.94rem;">Prisma is published as <a href="https://github.com/hebelmx/ExxerCube.Prisma" rel="noopener">ExxerCube Prisma</a>, free to read, run and evaluate under the PolyForm Noncommercial license, with commercial licensing for production use. The release ships with the SIARA portal simulator, a synthetic document corpus, more than 3,800 automated test methods and an end-to-end gate that runs the three ingestion processes from download to export. Its <a href="https://hebelmx.github.io/ExxerCube.Prisma/" rel="noopener">project website</a> walks through the system in six short demo videos, in English and Spanish. IndViSi remains private.</p>
+        <a class="demo-still" href="https://hebelmx.github.io/ExxerCube.Prisma/#demo" rel="noopener">
+          <img src="../assets/projects/regulatory-document-intelligence-platform/prisma-reconciliation.jpg" alt="Prisma's reconciled field table, with the oficio number flagged as a conflict between the PDF and the other sources" loading="lazy" width="1280" height="720">
+          <span>Watch the six demo videos</span>
+        </a>
+      </div>
+
+      <div class="detail-block">
         <h3>Architecture</h3>
         <p style="color:var(--text-dim); font-size:0.94rem;">Both products share a common hexagonal-architecture .NET foundation and document-processing pipeline, with IndViSi built as an additional module on top of the platform originally developed for regulatory-request processing. Ingestion, processing and validation are separated into independent stages, using a functional error-handling model (Result&lt;T&gt;) in place of exceptions for business logic, with full observability instrumentation throughout.</p>
       </div>
@@ -82,9 +116,10 @@
         <ul>
           <li>.NET 10 / C#, hexagonal / clean architecture</li>
           <li>Blazor (MudBlazor) web interface</li>
-          <li>OCR and document-AI processing (Python interop)</li>
+          <li>Tesseract OCR with image-quality analysis; Python document-AI interop (CSnakes)</li>
           <li>Event-driven processing (Rx.NET)</li>
-          <li>xUnit v3, Serilog, OpenTelemetry</li>
+          <li>xUnit v3, Testcontainers, Playwright; Serilog, OpenTelemetry</li>
+          <li>Docker images per service; Playwright-driven SIARA portal ingestion</li>
         </ul>
       </div>
     </div>
