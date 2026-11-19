@@ -16,7 +16,10 @@
   gap: 16px;
   min-height: 46px;
   overflow-x: auto;
-  scrollbar-width: thin;
+  scrollbar-width: none;
+}
+.jump-bar .wrap::-webkit-scrollbar {
+  display: none;
 }
 .jump-links {
   display: flex;
@@ -156,13 +159,14 @@ section[id] {
 }
 .pub-search {
   width: 100%;
+  min-height: 44px;
   padding: 10px 36px 10px 36px;
-  border-radius: 10px;
+  border-radius: var(--radius);
   border: 1px solid var(--border);
   background: var(--bg-alt);
   color: var(--text);
   font: inherit;
-  font-size: 0.9rem;
+  font-size: max(1rem, 1em);
   transition: border-color .15s ease;
 }
 .pub-search::placeholder {
@@ -747,6 +751,11 @@ dialog.bibtex-dialog::backdrop {
 }
 
 /* ---------- Responsive ---------- */
+@media (max-width: 1080px) {
+  .jump-meta {
+    display: none;
+  }
+}
 @media (max-width: 860px) {
   .hub-search-row {
     grid-template-columns: 1fr 1fr;
@@ -754,15 +763,278 @@ dialog.bibtex-dialog::backdrop {
   .search-wrap {
     grid-column: 1 / -1;
   }
-  .jump-meta {
-    display: none;
-  }
 }
 @media (max-width: 520px) {
   .hub-search-row {
     grid-template-columns: 1fr;
   }
   .pub-card {
+    padding: 16px;
+  }
+}
+
+/* ---------- Trajectory & Understated Academic Bar ---------- */
+.trajectory-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 18px 0 24px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+.trajectory-line .step {
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  color: var(--text);
+  font-weight: 600;
+}
+.trajectory-line .step.current {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.trajectory-line .arrow {
+  color: var(--text-dimmer);
+}
+
+.academic-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 24px;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  font-size: 0.84rem;
+  color: var(--text-dim);
+}
+.academic-strip-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+.academic-strip a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.academic-strip a:hover,
+.academic-strip a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.academic-strip-note {
+  font-size: 0.78rem;
+  color: var(--text-dimmer);
+}
+
+/* ---------- Level 2: Research Contributions (4 Themes) ---------- */
+.contrib-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.contrib-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contrib-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.contrib-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+.contrib-status {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  color: var(--text-dim);
+}
+.contrib-status.practice {
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+  color: var(--accent);
+}
+.contrib-card h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.3;
+}
+.contrib-card p {
+  margin: 0;
+  color: var(--text-dim);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  flex: 1;
+}
+.contrib-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+.contrib-filter-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 7px 12px;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color .15s ease, background .15s ease;
+}
+.contrib-filter-btn:hover,
+.contrib-filter-btn:focus-visible {
+  border-color: var(--accent);
+  background: var(--bg-alt);
+}
+
+/* ---------- Level 3: On-Demand Expandable Repository (<details>) ---------- */
+.repo-disclosure {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+}
+.repo-disclosure > summary.repo-summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 22px 24px;
+  background: var(--bg-card);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  user-select: none;
+}
+.repo-disclosure > summary.repo-summary::-webkit-details-marker {
+  display: none;
+}
+.repo-summary-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.repo-summary-title {
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.repo-summary-meta {
+  font-size: 0.84rem;
+  color: var(--text-dim);
+}
+.repo-summary-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 0.84rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.repo-disclosure[open] > summary.repo-summary {
+  border-bottom: 1px solid var(--border);
+}
+.repo-disclosure[open] .repo-cue-open {
+  display: none;
+}
+.repo-disclosure:not([open]) .repo-cue-close {
+  display: none;
+}
+.repo-disclosure[open] .repo-summary-cue {
+  background: transparent;
+  color: var(--accent);
+}
+.repo-disclosure::details-content {
+  interpolate-size: allow-keywords;
+  overflow: clip;
+  contain: layout;
+}
+.repo-disclosure:not([open])::details-content {
+  block-size: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .repo-disclosure::details-content {
+    transition: block-size, content-visibility, display;
+    transition-duration: 0.28s;
+    transition-timing-function: ease-in-out;
+    transition-behavior: allow-discrete;
+  }
+}
+.repo-body {
+  padding: 22px 24px 24px;
+}
+
+/* ---------- Structured 5-Field Publication Details (<dl>) ---------- */
+.pub-structured {
+  margin: 0;
+  display: grid;
+  gap: 10px;
+  padding: 12px 14px;
+  border-left: 2px solid var(--accent);
+  background: var(--bg-alt);
+}
+.pub-structured-row {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 8px 14px;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+.pub-structured dt {
+  font-weight: 700;
+  color: var(--text);
+}
+.pub-structured dd {
+  margin: 0;
+  color: var(--text-dim);
+}
+
+@media (max-width: 800px) {
+  .contrib-grid {
+    grid-template-columns: 1fr;
+  }
+  .pub-structured-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .repo-disclosure > summary.repo-summary,
+  .repo-body {
     padding: 16px;
   }
 }
