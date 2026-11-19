@@ -228,11 +228,10 @@
   </div>
 </header>
 
-<!-- LEVEL 1: RESEARCH JOURNEY -->
+<!-- RESEARCH JOURNEY -->
 <section id="journey" style="padding-top:64px;">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker">Level 1 · Research Narrative</span>
       <h2 class="section-title">Research Journey: Engineering, Optimization &amp; Computational Intelligence</h2>
     </div>
     <div class="narrative">
@@ -251,13 +250,12 @@
   </div>
 </section>
 
-<!-- LEVEL 2: RESEARCH CONTRIBUTIONS -->
+<!-- RESEARCH CONTRIBUTIONS -->
 <section id="contributions">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker">Level 2 · Research Contributions</span>
-      <h2 class="section-title">Four Connected Lines of Work</h2>
-      <p class="section-desc">Themes A through C represent documented, peer-reviewed research published between 2008 and 2019; Theme D describes how those modeling and optimization principles carry forward into current industrial AI development.</p>
+      <h2 class="section-title">Research Themes &amp; Scientific Contributions</h2>
+      <p class="section-desc">My research spans mathematical optimization, computational modeling, and process engineering, with peer-reviewed contributions published between 2008 and 2019. These foundations continue to inform my current work in industrial AI and intelligent engineering systems.</p>
     </div>
 
     <div class="contrib-grid">
@@ -314,85 +312,84 @@
   </div>
 </section>
 
-<!-- LEVEL 3: COMPLETE PUBLICATIONS REPOSITORY (EXPANDABLE ON DEMAND) -->
+<!-- COMPLETE PUBLICATIONS REPOSITORY (SEARCH ALWAYS VISIBLE, FULL LIST EXPANDABLE ON DEMAND) -->
 <section id="publications">
   <div class="wrap">
     <div class="section-head">
-      <span class="kicker">Level 3 · Complete Publications Repository</span>
       <h2 class="section-title">Searchable Publication Database</h2>
-      <p class="section-desc">Expand the repository below to search all indexed works by keyword, filter by research theme, publication type, year, or co-author, inspect structured paper breakdowns, download available manuscripts, or copy BibTeX citations.</p>
+      <p class="section-desc">Search all indexed works by keyword, filter by research theme, publication type, year, or co-author, and expand the full publication list below on demand to inspect structured summaries, download available manuscripts, or copy BibTeX citations.</p>
     </div>
+
+    <search class="hub-controls" aria-label="Search and filter publications">
+      <div class="hub-search-row">
+        <div class="search-wrap">
+          <span class="search-icon" aria-hidden="true">🔍</span>
+          <label for="pub-search" class="visually-hidden">Search publications by title, keyword, co-author, journal, year, or DOI</label>
+          <input
+            id="pub-search"
+            class="pub-search"
+            type="search"
+            placeholder="Search by title, keyword, co-author, journal, year, or DOI…"
+            enterkeyhint="search"
+            autocorrect="off"
+            autocapitalize="none"
+            spellcheck="false"
+          >
+          <button id="search-clear" class="search-clear" type="button" aria-label="Clear search" hidden>✕</button>
+        </div>
+        <select id="pub-type" class="hub-select" aria-label="Filter by publication type">
+          <option value="all">All Types</option>
+          <option value="journal">Journal Articles</option>
+          <option value="proceedings">Conference Proceedings</option>
+          <option value="chapter">Book Chapters</option>
+          <option value="pdf">Downloadable PDF</option>
+        </select>
+        <select id="pub-year" class="hub-select" aria-label="Filter by publication year">
+          <option value="all">All Years</option>
+        </select>
+        <select id="pub-sort" class="hub-select" aria-label="Sort publications">
+          <option value="citations">Sort: Most Cited</option>
+          <option value="year">Sort: Newest First</option>
+        </select>
+      </div>
+
+      <div class="topic-pills" role="group" aria-label="Filter by research topic">
+        <button type="button" class="topic-pill active" data-topic="all" aria-pressed="true">All</button>
+        <button type="button" class="topic-pill" data-topic="dwc" aria-pressed="false">Dividing Wall Columns</button>
+        <button type="button" class="topic-pill" data-topic="moo" aria-pressed="false">Multi-Objective Optimization</button>
+        <button type="button" class="topic-pill" data-topic="biojet" aria-pressed="false">Biojet Fuel &amp; Energy</button>
+        <button type="button" class="topic-pill" data-topic="ga-ai" aria-pressed="false">Genetic Algorithms &amp; AI</button>
+        <button type="button" class="topic-pill" data-topic="control" aria-pressed="false">Control Systems</button>
+      </div>
+
+      <div class="hub-status-row">
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:10px;">
+          <span id="pub-count" aria-live="polite">Loading publications…</span>
+          <div id="active-filters" class="hub-active-filters"></div>
+        </div>
+        <div class="hub-toolbar-actions">
+          <button id="reset-all-btn" type="button" class="toolbar-btn" hidden>Reset filters</button>
+          <button id="toggle-all-btn" type="button" class="toolbar-btn" commandfor="pub-list" command="--toggle-all" aria-expanded="false">
+            <span class="expand">Expand all summaries</span>
+            <span class="collapse">Collapse all summaries</span>
+          </button>
+        </div>
+      </div>
+    </search>
 
     <details id="repo-disclosure" class="repo-disclosure">
       <summary class="repo-summary">
         <div class="repo-summary-info">
-          <span class="repo-summary-title">Full Publications &amp; Research Repository (<span data-metric="total">30</span> Indexed Works)</span>
+          <span class="repo-summary-title">Full Publication List (<span data-metric="total">30</span> Indexed Works)</span>
           <span class="repo-summary-meta"><span data-metric="breakdown">19 journal articles · 10 conference proceedings · 1 book chapter</span> · <span data-metric="pdfs">28</span> downloadable PDFs · BibTeX &amp; DOI links</span>
         </div>
         <span class="repo-summary-cue" aria-hidden="true">
-          <span class="repo-cue-open">Expand Full List &amp; Search ↓</span>
-          <span class="repo-cue-close">Collapse Repository ↑</span>
+          <span class="repo-cue-open">Expand Full List ↓</span>
+          <span class="repo-cue-close">Collapse List ↑</span>
         </span>
       </summary>
 
       <div class="repo-body">
-        <search class="hub-controls" aria-label="Search and filter publications">
-          <div class="hub-search-row">
-            <div class="search-wrap">
-              <span class="search-icon" aria-hidden="true">🔍</span>
-              <label for="pub-search" class="visually-hidden">Search publications by title, keyword, co-author, journal, year, or DOI</label>
-              <input
-                id="pub-search"
-                class="pub-search"
-                type="search"
-                placeholder="Search by title, keyword, co-author, journal, year, or DOI…"
-                enterkeyhint="search"
-                autocorrect="off"
-                autocapitalize="none"
-                spellcheck="false"
-              >
-              <button id="search-clear" class="search-clear" type="button" aria-label="Clear search" hidden>✕</button>
-            </div>
-            <select id="pub-type" class="hub-select" aria-label="Filter by publication type">
-              <option value="all">All Types</option>
-              <option value="journal">Journal Articles</option>
-              <option value="proceedings">Conference Proceedings</option>
-              <option value="chapter">Book Chapters</option>
-              <option value="pdf">Downloadable PDF</option>
-            </select>
-            <select id="pub-year" class="hub-select" aria-label="Filter by publication year">
-              <option value="all">All Years</option>
-            </select>
-            <select id="pub-sort" class="hub-select" aria-label="Sort publications">
-              <option value="citations">Sort: Most Cited</option>
-              <option value="year">Sort: Newest First</option>
-            </select>
-          </div>
-
-          <div class="topic-pills" role="group" aria-label="Filter by research topic">
-            <button type="button" class="topic-pill active" data-topic="all" aria-pressed="true">All</button>
-            <button type="button" class="topic-pill" data-topic="dwc" aria-pressed="false">Dividing Wall Columns</button>
-            <button type="button" class="topic-pill" data-topic="moo" aria-pressed="false">Multi-Objective Optimization</button>
-            <button type="button" class="topic-pill" data-topic="biojet" aria-pressed="false">Biojet Fuel &amp; Energy</button>
-            <button type="button" class="topic-pill" data-topic="ga-ai" aria-pressed="false">Genetic Algorithms &amp; AI</button>
-            <button type="button" class="topic-pill" data-topic="control" aria-pressed="false">Control Systems</button>
-          </div>
-
-          <div class="hub-status-row">
-            <div style="display:flex; flex-wrap:wrap; align-items:center; gap:10px;">
-              <span id="pub-count" aria-live="polite">Loading publications…</span>
-              <div id="active-filters" class="hub-active-filters"></div>
-            </div>
-            <div class="hub-toolbar-actions">
-              <button id="reset-all-btn" type="button" class="toolbar-btn" hidden>Reset filters</button>
-              <button id="toggle-all-btn" type="button" class="toolbar-btn" commandfor="pub-list" command="--toggle-all" aria-expanded="false">
-                <span class="expand">Expand all summaries</span>
-                <span class="collapse">Collapse all summaries</span>
-              </button>
-            </div>
-          </div>
-        </search>
-
         <div id="pub-list" class="pub-cards" aria-live="polite"></div>
 
         <p style="color:var(--text-dimmer); font-size:0.78rem; margin:20px 0 0; max-width:80ch;">Note on copyright &amp; manuscripts: Publication summaries and structured breakdowns are original descriptions written for this portfolio rather than verbatim publisher abstracts. Local PDF links are provided strictly as personal research copies where archived; publisher-only works link directly to their official DOIs.</p>

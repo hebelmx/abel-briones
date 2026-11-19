@@ -1033,10 +1033,11 @@
     setTopic('all');
   }
 
-  // Event listeners for filters
+  // Event listeners for filters (auto-expand publication list on interaction)
   searchEl.addEventListener('input', () => {
     state.query = searchEl.value;
     clearSearchEl.hidden = !state.query;
+    if (state.query.trim() && repoDisclosure) repoDisclosure.open = true;
     render();
   });
 
@@ -1050,21 +1051,27 @@
 
   typeEl.addEventListener('change', () => {
     state.type = typeEl.value;
+    if (repoDisclosure) repoDisclosure.open = true;
     render();
   });
 
   yearEl.addEventListener('change', () => {
     state.year = yearEl.value;
+    if (repoDisclosure) repoDisclosure.open = true;
     render();
   });
 
   sortEl.addEventListener('change', () => {
     state.sort = sortEl.value;
+    if (repoDisclosure) repoDisclosure.open = true;
     render();
   });
 
   topicPills.forEach(btn => {
-    btn.addEventListener('click', () => setTopic(btn.getAttribute('data-topic')));
+    btn.addEventListener('click', () => {
+      if (repoDisclosure) repoDisclosure.open = true;
+      setTopic(btn.getAttribute('data-topic'));
+    });
   });
 
   if (resetAllBtn) {
@@ -1110,6 +1117,7 @@
   // Expand All / Collapse All via Invoker Commands + fallback (modern-web-guidance: accordion)
   function runToggleAll(button, container) {
     const expand = button.getAttribute('aria-expanded') !== 'true';
+    if (expand && repoDisclosure) repoDisclosure.open = true;
     for (const details of container.querySelectorAll('details.pub-details')) {
       details.open = expand;
     }
