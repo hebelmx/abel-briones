@@ -3,12 +3,12 @@
   var toggle = document.querySelector('.theme-toggle');
   var stored = null;
   try { stored = localStorage.getItem('theme'); } catch (e) {}
-  if (stored) root.setAttribute('data-theme', stored);
+  if (stored === 'light' || stored === 'dark') root.setAttribute('data-theme', stored);
 
   function currentTheme() {
     var attr = root.getAttribute('data-theme');
     if (attr) return attr;
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    return 'light';
   }
 
   function setIcon() {
@@ -30,10 +30,14 @@
   var navLinks = document.querySelector('.nav-links');
   if (menuBtn && navLinks) {
     menuBtn.addEventListener('click', function () {
-      navLinks.classList.toggle('open');
+      var open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', String(open));
     });
     navLinks.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () { navLinks.classList.remove('open'); });
+      a.addEventListener('click', function () {
+        navLinks.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
     });
   }
 
