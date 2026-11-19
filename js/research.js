@@ -21,6 +21,13 @@
         'Consolidates extractive and solvent-recovery columns into one dividing-wall shell without sacrificing product purity.',
         'Group flagship publication with 191+ Google Scholar citations in ACS Industrial & Engineering Chemistry Research (Q1).'
       ],
+      structured: {
+        problem: 'Extractive distillation of non-ideal and azeotropic mixtures typically requires two separate columns (extractive + solvent recovery) with high reboiler energy and capital cost.',
+        methodology: 'Constrained multi-objective genetic algorithm coupled directly to rigorous Aspen Plus steady-state models minimizing heat duty and total annualized cost.',
+        contribution: 'Demonstrated a feasible single-shell extractive dividing-wall column (EDWC) design workflow achieving significant energy and capital reductions.',
+        relevance: 'Establishes a generalizable blueprint for combining thermal coupling with solvent-assisted separations in energy-intensive chemical plants.',
+        myContribution: 'Co-authored research.'
+      },
       bib: { type: 'article', key: 'bravo2010extractive', journal: 'Industrial \\& Engineering Chemistry Research', volume: '49', number: '8', pages: '3672--3688', publisher: 'American Chemical Society' }
     },
     {
@@ -42,6 +49,13 @@
         'Evaluates open-loop controllability via SVD condition numbers alongside steady-state energy savings.',
         'Foundational methodology paper with 125+ Google Scholar citations in Wiley Chemical Engineering & Technology.'
       ],
+      structured: {
+        problem: 'Dividing-wall columns save energy but introduce tight thermal coupling that can degrade operability and make optimal sizing non-convex.',
+        methodology: 'Genetic algorithm interfaced with Aspen Plus for design optimization, paired with singular value decomposition (SVD) for open-loop controllability analysis.',
+        contribution: 'Established that optimized single- and double-dividing-wall columns can achieve substantial energy savings while maintaining favorable theoretical control properties.',
+        relevance: 'Demonstrates the importance of evaluating dynamic controllability alongside steady-state cost before deploying intensified industrial equipment.',
+        myContribution: 'Co-authored research.'
+      },
       bib: { type: 'article', key: 'gomezcastro2008dividing', journal: 'Chemical Engineering \\& Technology', volume: '31', number: '9', pages: '1246--1260', publisher: 'Wiley-VCH' }
     },
     {
@@ -63,6 +77,13 @@
         'Traces full trade-off curves between capital complexity (stage count) and operating energy (heat duty).',
         '110+ Google Scholar citations in Elsevier Computers & Chemical Engineering (Q1).'
       ],
+      structured: {
+        problem: 'Designing Petlyuk distillation sequences involves discrete structural choices and continuous operating variables under strict purity constraints, where scalarized solvers miss trade-offs.',
+        methodology: 'Constrained multi-objective genetic algorithm (MOGA) coupled directly to rigorous Aspen Plus models to minimize stage count and heat duty simultaneously.',
+        contribution: 'Produced complete Pareto-optimal fronts for ideal Petlyuk sequences, giving engineers a full spectrum of capital-vs-energy trade-offs.',
+        relevance: 'Formed the core simulator-in-the-loop multi-objective optimization framework reused across subsequent distillation, biofuel, and surrogate-modeling studies.',
+        myContribution: 'Co-authored research (two-author study with Claudia Gutiérrez-Antonio).'
+      },
       bib: { type: 'article', key: 'gutierrezantonio2009pareto', journal: 'Computers \\& Chemical Engineering', volume: '33', number: '2', pages: '454--464', publisher: 'Elsevier' }
     },
     {
@@ -84,6 +105,13 @@
         'Quantifies how feed volatility ratios dictate which thermally coupled topology is most advantageous.',
         '104+ Google Scholar citations in Elsevier Computers & Chemical Engineering (Q1).'
       ],
+      structured: {
+        problem: 'Extending thermally coupled distillation from three-component to four-component mixtures dramatically expands the topological and operational search space.',
+        methodology: 'Genetic-algorithm optimization coupled to Aspen Plus across varying feed relative volatilities, evaluating energy, second-law efficiency, TAC, and SVD control metrics.',
+        contribution: 'Mapped how feed volatility profiles govern which intensified quaternary sequence outperforms conventional distillation trains.',
+        relevance: 'Provides quantitative selection criteria for multi-product industrial fractionation trains beyond ternary textbook cases.',
+        myContribution: 'Co-authored research.'
+      },
       bib: { type: 'article', key: 'vazquezcastillo2009quaternary', journal: 'Computers \\& Chemical Engineering', volume: '33', number: '11', pages: '1841--1850', publisher: 'Elsevier' }
     },
     {
@@ -105,6 +133,13 @@
         'Achieves significant reductions in heating/cooling utilities and process CO₂ emissions without materially raising fuel price.',
         '55+ Google Scholar citations in Elsevier Chemical Engineering and Processing: Process Intensification.'
       ],
+      structured: {
+        problem: 'Renewable biojet fuel hydrotreating processes face high utility demand and tight economic margins that hinder industrial adoption.',
+        methodology: 'Simultaneous heat-exchanger energy integration and thermally coupled process intensification modeled rigorously for Jatropha curcas oil hydrotreating.',
+        contribution: 'Demonstrated meaningful cuts in external utility demand and CO₂ emissions while keeping total annual cost and minimum selling price competitive.',
+        relevance: 'Shows how systems-level process integration can improve sustainability metrics without undermining industrial economics.',
+        myContribution: 'Co-authored research.'
+      },
       bib: { type: 'article', key: 'gutierrezantonio2016simultaneous', journal: 'Chemical Engineering and Processing: Process Intensification', volume: '110', pages: '134--145', publisher: 'Elsevier' }
     },
     {
@@ -210,6 +245,13 @@
         'Delivers major reductions in computational time while preserving Pareto-front accuracy on rigorous DWC designs.',
         '34+ Google Scholar citations — a direct applied-AI precursor to later industrial machine-learning systems.'
       ],
+      structured: {
+        problem: 'Evaluating every candidate dividing-wall column design inside a full physical simulator makes multi-objective genetic algorithms computationally expensive.',
+        methodology: 'Artificial neural networks (ANNs) trained as surrogate models embedded within a constrained multi-objective stochastic optimization loop.',
+        contribution: 'Significantly reduced wall-clock runtime and simulator calls needed to converge to the Pareto front without sacrificing design fidelity.',
+        relevance: 'Illustrates practical surrogate-assisted optimization—a direct conceptual bridge between classical process modeling and modern applied machine learning.',
+        myContribution: 'Co-authored research (two-author study with Claudia Gutiérrez-Antonio).'
+      },
       bib: { type: 'article', key: 'gutierrezantonio2015surrogate', journal: 'Chemical and Biochemical Engineering Quarterly', volume: '29', number: '4', pages: '491--504', publisher: 'Croatian Society of Chemical Engineers' }
     },
     {
@@ -358,6 +400,13 @@
         'Enables any MATLAB multi-objective algorithm to drive rigorous, complete chemical process models directly.',
         'Automates export of optimal Pareto designs into ready-to-run Aspen Plus backup (.bkp) files; 13+ OpenAlex citations.'
       ],
+      structured: {
+        problem: 'Many optimization studies rely on simplified reduced-order models because connecting general-purpose numerical toolkits to full industrial process simulators is error-prone.',
+        methodology: 'Software integration architecture linking MATLAB optimization algorithms directly to complete Aspen Plus models via COM automation with automated .bkp export.',
+        contribution: 'Provided a reusable, step-by-step engineering procedure enabling any MATLAB multi-objective solver to drive rigorous process simulations directly.',
+        relevance: 'Demonstrates clean software-engineering integration between computational optimization libraries and industrial simulation platforms.',
+        myContribution: 'Lead author (first author, two-author paper with Claudia Gutiérrez-Antonio).'
+      },
       bib: { type: 'article', key: 'brionesramirez2018multiobjective', journal: 'Computaci\\\'on y Sistemas', volume: '22', number: '4', pages: '1157--1170', publisher: 'Instituto Polit\\\'ecnico Nacional' }
     },
     {
@@ -422,6 +471,13 @@
         'Demonstrates up to 50% energy savings on industrial azeotropic mixtures with a single distillation boundary.',
         '8+ OpenAlex citations in Elsevier Computer Aided Chemical Engineering (ESCAPE 19).'
       ],
+      structured: {
+        problem: 'Applying dividing-wall columns to non-ideal azeotropic mixtures is constrained by distillation boundaries that can render naive designs thermodynamically infeasible.',
+        methodology: 'Material-balance feasibility screening coupled with constrained multi-objective genetic algorithm optimization in Aspen Plus.',
+        contribution: 'Established a structured feasibility-plus-optimization workflow reporting up to 50% energy savings on industrial azeotropic mixtures.',
+        relevance: 'Shows the value of embedding hard physical feasibility constraints ahead of stochastic search.',
+        myContribution: 'Lead author (first author, two-author proceedings paper with Claudia Gutiérrez-Antonio).'
+      },
       bib: { type: 'incollection', key: 'brionesramirez2009azeotropic', booktitle: 'Computer Aided Chemical Engineering (19th European Symposium on Computer Aided Process Engineering)', volume: '26', pages: '555--560', publisher: 'Elsevier' }
     },
     {
@@ -591,6 +647,13 @@
         'Integrates thermodynamic feasibility analysis with rigorous multi-objective optimization for azeotropic separations.',
         'Indexed via CrossRef and OpenAlex (publisher edition; no local preprint stored).'
       ],
+      structured: {
+        problem: 'Designing homogeneous azeotropic distillation columns requires coordinating thermodynamic phase-equilibrium modeling, feasibility screening, and rigorous optimization.',
+        methodology: 'End-to-end engineering methodology unifying thermodynamic boundary analysis with constrained multi-objective genetic-algorithm synthesis.',
+        contribution: 'Consolidated a decade of azeotropic column synthesis principles into a structured reference chapter in De Gruyter’s Process Intensification volume.',
+        relevance: 'Serves as a systematic engineering reference for translating complex separation theory into repeatable design workflows.',
+        myContribution: 'Lead author (first author, two-author book chapter with Claudia Gutiérrez-Antonio).'
+      },
       bib: { type: 'incollection', key: 'brionesramirez2019azeotropic', booktitle: 'Process Intensification', pages: '125--143', publisher: 'De Gruyter' }
     },
     {
@@ -672,6 +735,7 @@
   };
 
   // DOM elements
+  const repoDisclosure = document.getElementById('repo-disclosure');
   const listEl = document.getElementById('pub-list');
   const searchEl = document.getElementById('pub-search');
   const clearSearchEl = document.getElementById('search-clear');
@@ -680,6 +744,7 @@
   const sortEl = document.getElementById('pub-sort');
   const countEl = document.getElementById('pub-count');
   const activeFiltersEl = document.getElementById('active-filters');
+  const resetAllBtn = document.getElementById('reset-all-btn');
   const topicPills = document.querySelectorAll('.topic-pill');
   const coauthorPillsWrap = document.getElementById('coauthor-pills');
   const toggleAllBtn = document.getElementById('toggle-all-btn');
@@ -689,6 +754,43 @@
   const bibCodeEl = document.getElementById('bibtex-code');
 
   if (!listEl) return;
+
+  function syncDatasetCounts() {
+    const total = PUBLICATIONS.length;
+    const journals = PUBLICATIONS.filter(p => p.type === 'journal').length;
+    const proceedings = PUBLICATIONS.filter(p => p.type === 'proceedings').length;
+    const chapters = PUBLICATIONS.filter(p => p.type === 'chapter').length;
+    const pdfs = PUBLICATIONS.filter(p => Boolean(p.pdf)).length;
+    const breakdown = `${journals} journal · ${proceedings} proceedings · ${chapters} chapter`;
+
+    document.querySelectorAll('[data-metric="total"]').forEach(el => { el.textContent = String(total); });
+    document.querySelectorAll('[data-metric="pdfs"]').forEach(el => { el.textContent = String(pdfs); });
+    document.querySelectorAll('[data-metric="breakdown"]').forEach(el => { el.textContent = breakdown; });
+
+    if (typeEl) {
+      const labels = {
+        all: `All Types (${total})`,
+        journal: `Journal Articles (${journals})`,
+        proceedings: `Conference Proceedings (${proceedings})`,
+        chapter: `Book Chapters (${chapters})`,
+        pdf: `Downloadable PDF (${pdfs})`
+      };
+      Array.from(typeEl.options).forEach(opt => {
+        if (labels[opt.value]) opt.textContent = labels[opt.value];
+      });
+    }
+  }
+
+  function openRepository(opts) {
+    const { focusSearch = false, scroll = true } = opts || {};
+    if (repoDisclosure) repoDisclosure.open = true;
+    if (scroll) {
+      document.getElementById('publications')?.scrollIntoView({ behavior: 'smooth' });
+    }
+    if (focusSearch && searchEl) {
+      requestAnimationFrame(() => searchEl.focus({ preventScroll: true }));
+    }
+  }
 
   function escapeHtml(str) {
     return String(str)
@@ -757,11 +859,15 @@
     return PUBLICATIONS.filter(pub => {
       if (state.topic !== 'all' && !pub.topics.includes(state.topic)) return false;
       if (state.type === 'journal' && pub.type !== 'journal') return false;
-      if (state.type === 'proceedings' && pub.type === 'journal') return false;
+      if (state.type === 'proceedings' && pub.type !== 'proceedings') return false;
+      if (state.type === 'chapter' && pub.type !== 'chapter') return false;
       if (state.type === 'pdf' && !pub.pdf) return false;
       if (state.year !== 'all' && String(pub.year) !== state.year) return false;
       if (state.coauthor && !matchesCoauthor(pub, state.coauthor)) return false;
       if (q) {
+        const structuredText = pub.structured
+          ? Object.values(pub.structured).join(' ')
+          : '';
         const hay = [
           pub.title,
           pub.authors.join(' '),
@@ -770,7 +876,8 @@
           pub.doi || '',
           pub.resultTag,
           pub.resume,
-          pub.highlights.join(' ')
+          pub.highlights.join(' '),
+          structuredText
         ].join(' ').toLowerCase();
         if (!hay.includes(q)) return false;
       }
@@ -792,7 +899,7 @@
       chips.push({ label: `Topic: ${TOPIC_LABELS[state.topic]}`, clear: () => setTopic('all') });
     }
     if (state.type !== 'all') {
-      const labels = { journal: 'Journal Articles', proceedings: 'Proceedings & Chapters', pdf: 'PDF Available' };
+      const labels = { journal: 'Journal Articles', proceedings: 'Conference Proceedings', chapter: 'Book Chapters', pdf: 'PDF Available' };
       chips.push({ label: `Filter: ${labels[state.type]}`, clear: () => { state.type = 'all'; typeEl.value = 'all'; render(); } });
     }
     if (state.year !== 'all') {
@@ -813,6 +920,7 @@
       span.querySelector('button').addEventListener('click', c.clear);
       activeFiltersEl.appendChild(span);
     });
+    if (resetAllBtn) resetAllBtn.hidden = chips.length === 0;
   }
 
   function render() {
@@ -856,6 +964,14 @@
 
       const topicChips = pub.topics.map(t => `<span class="chip">${escapeHtml(TOPIC_LABELS[t])}</span>`).join('');
       const highlightsHtml = pub.highlights.map(h => `<li>${escapeHtml(h)}</li>`).join('');
+      const structuredHtml = pub.structured ? `
+        <dl class="pub-structured">
+          <div class="pub-structured-row"><dt>Research Problem</dt><dd>${escapeHtml(pub.structured.problem)}</dd></div>
+          <div class="pub-structured-row"><dt>Methodology</dt><dd>${escapeHtml(pub.structured.methodology)}</dd></div>
+          <div class="pub-structured-row"><dt>Research Contribution</dt><dd>${escapeHtml(pub.structured.contribution)}</dd></div>
+          <div class="pub-structured-row"><dt>Practical Relevance</dt><dd>${escapeHtml(pub.structured.relevance)}</dd></div>
+          <div class="pub-structured-row"><dt>My Contribution</dt><dd>${escapeHtml(pub.structured.myContribution)}</dd></div>
+        </dl>` : '';
 
       return `
         <article class="pub-card" data-id="${escapeHtml(pub.id)}">
@@ -873,8 +989,9 @@
             ${doiPill}
           </div>
           <details class="pub-details">
-            <summary>Executive Resume &amp; Technical Highlights</summary>
+            <summary>${pub.structured ? 'Research Breakdown &amp; Executive Summary' : 'Executive Summary &amp; Technical Highlights'}</summary>
             <div class="pub-resume-body">
+              ${structuredHtml}
               <p class="pub-resume-text">${escapeHtml(pub.resume)}</p>
               <ul class="pub-highlights">${highlightsHtml}</ul>
               <div class="pub-topic-tags">${topicChips}</div>
@@ -916,10 +1033,11 @@
     setTopic('all');
   }
 
-  // Event listeners for filters
+  // Event listeners for filters (auto-expand publication list on interaction)
   searchEl.addEventListener('input', () => {
     state.query = searchEl.value;
     clearSearchEl.hidden = !state.query;
+    if (state.query.trim() && repoDisclosure) repoDisclosure.open = true;
     render();
   });
 
@@ -933,32 +1051,55 @@
 
   typeEl.addEventListener('change', () => {
     state.type = typeEl.value;
+    if (repoDisclosure) repoDisclosure.open = true;
     render();
   });
 
   yearEl.addEventListener('change', () => {
     state.year = yearEl.value;
+    if (repoDisclosure) repoDisclosure.open = true;
     render();
   });
 
   sortEl.addEventListener('change', () => {
     state.sort = sortEl.value;
+    if (repoDisclosure) repoDisclosure.open = true;
     render();
   });
 
   topicPills.forEach(btn => {
-    btn.addEventListener('click', () => setTopic(btn.getAttribute('data-topic')));
-  });
-
-  // Interactive Research Focus cards filter publications & jump
-  document.querySelectorAll('.interactive-theme[data-topic]').forEach(card => {
-    card.addEventListener('click', () => {
-      setTopic(card.getAttribute('data-topic'));
-      document.getElementById('publications')?.scrollIntoView({ behavior: 'smooth' });
+    btn.addEventListener('click', () => {
+      if (repoDisclosure) repoDisclosure.open = true;
+      setTopic(btn.getAttribute('data-topic'));
     });
   });
 
-  // Interactive Co-Author pills filter publications & jump
+  if (resetAllBtn) {
+    resetAllBtn.addEventListener('click', resetAll);
+  }
+
+  // Hero / Jump-bar actions that open the expandable repository on demand
+  document.querySelectorAll('[data-action="open-repo"]').forEach(el => {
+    el.addEventListener('click', () => {
+      openRepository({ focusSearch: false, scroll: true });
+    });
+  });
+
+  document.querySelectorAll('[data-action="open-search"]').forEach(el => {
+    el.addEventListener('click', () => {
+      openRepository({ focusSearch: true, scroll: true });
+    });
+  });
+
+  // Level 2 Research Contribution theme buttons filter publications & expand repository
+  document.querySelectorAll('[data-filter-topic]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setTopic(btn.getAttribute('data-filter-topic'));
+      openRepository({ focusSearch: false, scroll: true });
+    });
+  });
+
+  // Interactive Co-Author pills filter publications, expand repository & jump
   if (coauthorPillsWrap) {
     coauthorPillsWrap.addEventListener('click', e => {
       const btn = e.target.closest('.coauthor-pill');
@@ -968,7 +1109,7 @@
       renderCoauthorPills();
       render();
       if (state.coauthor) {
-        document.getElementById('publications')?.scrollIntoView({ behavior: 'smooth' });
+        openRepository({ focusSearch: false, scroll: true });
       }
     });
   }
@@ -976,6 +1117,7 @@
   // Expand All / Collapse All via Invoker Commands + fallback (modern-web-guidance: accordion)
   function runToggleAll(button, container) {
     const expand = button.getAttribute('aria-expanded') !== 'true';
+    if (expand && repoDisclosure) repoDisclosure.open = true;
     for (const details of container.querySelectorAll('details.pub-details')) {
       details.open = expand;
     }
@@ -1081,8 +1223,33 @@
     });
   }
 
+  function applyUrlState() {
+    const params = new URLSearchParams(window.location.search);
+    const rawQuery = params.get('search');
+    const safeQuery = rawQuery ? rawQuery.trim().slice(0, 160) : '';
+    const hasPubHash = window.location.hash === '#publications';
+
+    if (safeQuery) {
+      state.query = safeQuery;
+      searchEl.value = safeQuery;
+      clearSearchEl.hidden = false;
+      render();
+      openRepository({ focusSearch: false, scroll: true });
+    } else if (hasPubHash) {
+      openRepository({ focusSearch: false, scroll: false });
+    }
+  }
+
+  window.addEventListener('hashchange', () => {
+    if (window.location.hash === '#publications') {
+      openRepository({ focusSearch: false, scroll: false });
+    }
+  });
+
   // Initialize
+  syncDatasetCounts();
   populateYears();
   renderCoauthorPills();
   render();
+  applyUrlState();
 })();
